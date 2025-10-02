@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": "acb8",
+      "name": "Vin",
+      "email": "vmm@email.com",
+      "location": "bras",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/png?seed=Vin"
+    }
+  ]
+}
