@@ -8,7 +8,7 @@ só chamam as funções getUsers() e createUser().
 import axios from "axios";
 import type { User } from "../types/User";
 
-const API_URL = "http://localhost:3001/users";
+const API_URL = "https://my-json-server.typicode.com/Vinnizius1/user-crm-app/users";
 
 export const getUsers = async (): Promise<User[]> => {
   const response = await axios.get(API_URL);
