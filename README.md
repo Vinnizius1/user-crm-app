@@ -35,16 +35,32 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 ### Running the Application
 
-1.  **Start the API server**:
-    Open a terminal and run the following command to start the `json-server`. It will run on `http://localhost:3002`.
-    ```sh
-    npm run api
-    ```
+This project is configured to connect to a live, read-only API hosted by `my-json-server`. For a quick start, you can run the application without a local API server.
 
-2.  **Start the development server**:
-    Open a second terminal and run the `dev` command. This will start the Vite development server, typically on `http://localhost:5173`.
-    ```sh
-    npm run dev
-    ```
+**1. Quick Start (Read-Only Mode)**
 
-3. Open your browser and navigate to the address provided by the Vite server to see the application in action.
+Install the dependencies and start the development server. The application will fetch data from the live API.
+
+```sh
+npm install
+npm run dev
+```
+
+**2. Full Development Mode (with Local API)**
+
+The live API is read-only. For full functionality (creating, updating, or deleting users), it's recommended to run the local `json-server`.
+
+First, in the file `src/services/userService.ts`, temporarily change the `API_URL` back to `http://localhost:3001/users`.
+
+Then, run the two servers in separate terminals:
+
+**Terminal 1 (Start the local API server):**
+```sh
+npm run api
+```
+
+**Terminal 2 (Start the development server):**
+```sh
+npm run dev
+```
+> **Note:** Remember to change the `API_URL` back to the `my-json-server` link before committing changes intended for production.
